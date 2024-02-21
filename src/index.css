@@ -1,8 +1,10 @@
 * {
+  -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* 非前缀版本，适用于Chrome和Opera */
+  user-select: none;
 }
 
 body {
