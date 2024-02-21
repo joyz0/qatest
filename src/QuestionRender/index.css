@@ -2,8 +2,10 @@ li {
   cursor: pointer;
 }
 
-li:hover {
-  color: #0088ff;
+@media (min-width: 768px) {
+  li:hover {
+    color: #0088ff;
+  }
 }
 
 a {

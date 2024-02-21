@@ -19,7 +19,7 @@ function Report({ report }) {
     encodeURIComponent(JSON.stringify(report));
 
   return (
-    <a role="button" href={dataStr} download="report.json">
+    <a role="button" href={dataStr} download="report.txt">
       已完成所有题目，点击下载统计报告
     </a>
   );
