@@ -19,17 +19,16 @@ function Report({ report }) {
     encodeURIComponent(JSON.stringify(report));
 
   return (
-    <button>
-      <a href={dataStr} download="report.json">
-        已完成所有题目，点击下载统计报告
-      </a>
-    </button>
+    <a role="button" href={dataStr} download="report.json">
+      已完成所有题目，点击下载统计报告
+    </a>
   );
 }
 
 export function QuestionSquare({ questions }) {
   const [index, setIndex] = useState(0);
   const [report, setReport] = useState([]);
+  const [start, setStart] = useState(false);
   const timerRef = useRef();
   const completed = index === questions.length;
   const currentQuestion = questions[index];
@@ -45,6 +44,18 @@ export function QuestionSquare({ questions }) {
       },
     ]);
     setIndex(index + 1);
+  }
+
+  function handleStart() {
+    setStart(true);
+  }
+
+  if (!start) {
+    return (
+      <h3 role="button" onClick={handleStart}>
+        开始做题
+      </h3>
+    );
   }
 
   if (completed) {

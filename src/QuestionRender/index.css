@@ -8,4 +8,13 @@ li:hover {
 
 a {
   text-decoration: none;
+  color: #fff;
+}
+
+h3 {
+  cursor: pointer;
+}
+
+[role='button']:hover {
+  text-shadow: 0 0 1px #fff;
 }
